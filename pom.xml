@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+   vi:ts=3:sw=3:expandtab
+-->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <parent>
+      <groupId>org.jboss</groupId>
+      <artifactId>jboss-parent</artifactId>
+      <version>4</version>
+   </parent>
+
    <modelVersion>4.0.0</modelVersion>
 
    <groupId>org.jboss.alunite</groupId>
    <artifactId>jboss-alunite</artifactId>
-   <version>1.0.0-SNAPSHOT</version>
+   <version>0.1.0-SNAPSHOT</version>
+
+   <name>JBoss Alunite</name>
+
    <modules>
       <module>classloading</module>
       <module>deployer</module>
@@ -14,5 +26,9 @@
 
    <packaging>pom</packaging>
 
-    
+   <scm>
+      <connection>scm:git:git://github.com/wolfc/jboss-alunite.git</connection>
+      <developerConnection>scm:git:git@github.com:wolfc/jboss-alunite.git</developerConnection>
+      <url>http://github.com/wolfc/jboss-alunite</url>
+   </scm>
 </project>
