@@ -1,0 +1,29 @@
+grant codeBase "file:${user.home}/.m2/repository/junit/junit/4.4/junit-4.4.jar" {
+    permission java.security.AllPermission;
+};
+
+grant codeBase "file:/opt/idea/idea-IC-107.105/plugins/junit/lib/junit-rt.jar" {
+    permission java.security.AllPermission;
+};
+grant codeBase "file:/opt/idea/idea-IC-107.105/lib/idea_rt.jar" {
+    permission java.security.AllPermission;
+};
+
+grant principal org.jboss.alunite.classloading.test.apiisolation.TestPrincipal "tester" {
+    //permission java.security.AllPermission;
+    permission java.lang.RuntimePermission "createClassLoader";
+};
+grant codeBase "file:target/test-classes/" {
+    //permission java.security.AllPermission;
+    // these permission are normally not available to user code
+    permission javax.security.auth.AuthPermission "doAs";
+    permission javax.security.auth.AuthPermission "doAsPrivileged";
+    permission javax.security.auth.AuthPermission "modifyPrincipals";
+    permission javax.security.auth.AuthPermission "setReadOnly";
+
+    permission java.lang.RuntimePermission "accessDeclaredMembers";
+    permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+
+    // for the fail in ValueProcessor
+    //permission java.lang.RuntimePermission "getClassLoader";
+};
