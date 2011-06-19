@@ -29,6 +29,8 @@ import java.net.URL;
 import java.util.Enumeration;
 
 /**
+ * Combine multiple class loaders into one.
+ *
  * @author <a href="cdewolf@redhat.com">Carlo de Wolf</a>
  */
 public class AluniteClassLoader extends ClassLoader
