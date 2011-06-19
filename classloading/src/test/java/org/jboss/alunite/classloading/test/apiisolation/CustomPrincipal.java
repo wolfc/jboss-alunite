@@ -26,10 +26,10 @@ import java.security.Principal;
 /**
  * @author <a href="mailto:cdewolf@redhat.com">Carlo de Wolf</a>
  */
-final class TestPrincipal implements Principal {
+final class CustomPrincipal implements Principal {
     private final String name;
 
-    TestPrincipal(final String name) {
+    CustomPrincipal(final String name) {
         this.name = name;
     }
 
@@ -38,7 +38,7 @@ final class TestPrincipal implements Principal {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TestPrincipal that = (TestPrincipal) o;
+        CustomPrincipal that = (CustomPrincipal) o;
 
         return name.equals(that.name);
     }

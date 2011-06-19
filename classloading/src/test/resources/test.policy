@@ -9,7 +9,7 @@ grant codeBase "file:/opt/idea/idea-IC-107.105/lib/idea_rt.jar" {
     permission java.security.AllPermission;
 };
 
-grant principal org.jboss.alunite.classloading.test.apiisolation.TestPrincipal "tester" {
+grant principal org.jboss.alunite.classloading.test.apiisolation.CustomPrincipal "tester" {
     //permission java.security.AllPermission;
     permission java.lang.RuntimePermission "createClassLoader";
 };

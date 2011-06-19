@@ -58,7 +58,7 @@ public class ApiIsolationTestCase {
     public void testIsolation() throws Exception {
         assertEquals(SecretValueImpl.class.getName(), ValueProcessor.SECRET);
         final Subject subject = new Subject();
-        subject.getPrincipals().add(new TestPrincipal("tester"));
+        subject.getPrincipals().add(new CustomPrincipal("tester"));
         subject.setReadOnly();
         final URLClassLoader tccl = (URLClassLoader) Thread.currentThread().getContextClassLoader();
         final ClassLoader apiClassLoader = Subject.doAsPrivileged(subject, new PrivilegedExceptionAction<ClassLoader>() {
